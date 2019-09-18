@@ -1,4 +1,5 @@
-# countDown_nodejs
+# count_down
 nodejs 控制台显示倒计时
 
-node count_down.js运行
+1.安装figlet；
+2.node count_down.js运行
