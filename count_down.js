@@ -14,7 +14,7 @@ rule.minute = 00;
 
 let job = schedule.scheduleJob(rule, function () {
     current_time = new Date().getTime();
-    get_remain_time(end_time, current_time, false);
+    get_remain_time(end_time, current_time, true);
 
 });
 
@@ -45,8 +45,8 @@ function get_remain_time(end_time, current_time, refresh) {
             console.log(data)
         });
     } else if (refresh && (current_day - refresh_day >= 1)) {
-        refresh_day = new Date(current_time).getDate()
         console.clear()
+        refresh_day = new Date(current_time).getDate()
         figlet(`${display_day}!`, function (err, data) {
             if (err) {
                 console.log('Something went wrong...');
